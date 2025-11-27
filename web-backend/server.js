@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import contactRoutes from "./routes/contactRoutes.js";
 import partnerRoutes from "./routes/partnerRoutes.js";
 import newsRoutes from "./routes/newsRoutes.js";
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 
@@ -20,5 +21,6 @@ connectDB();
 app.use("/api/contact", contactRoutes);
 app.use("/api/partners", partnerRoutes);
 app.use("/api/news", newsRoutes);
+app.use("/api/auth", authRoutes);
 
 app.listen(5000, () => console.log("Server running on port 5000"));
